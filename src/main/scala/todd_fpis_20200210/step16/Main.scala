@@ -27,4 +27,12 @@ object Main extends App {
   println(sumTwoKey("todd", "eunmin")) // Some(3)
   println(sumTwoKey("no", "eunmin")) // None
   println(sumTwoKey("todd", "no")) // None
+
+  def incKey(key: String): Option[Int] = (map.get(key)) match {
+    case Some(a) => Some(a + 1)
+    case _ => None
+  }
+
+  println(incKey("todd")) // Some(2)
+  println(incKey("no")) // None
 }
