@@ -20,7 +20,7 @@ object Main extends App {
   // 둘중 하나라도 값이 없으면 None 이 나와야함
   // 정상이면 Some(숫자값)
   def sumTwoKey(key1: String, key2: String): Option[Int] = (map.get(key1), map.get(key2)) match {
-    case (Some(_1), Some(_2)) => Some(_1 + _2)
+    case (Some(a), Some(b)) => Some(a + b)
     case _ => None
   }
 
